@@ -1,0 +1,74 @@
+body {
+  width: 800px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: #eeeeee;
+}
+header {
+  height: 200px;
+  background-image: url(../images/castro_banner.jpg);
+}
+h1{
+  font-size: 36px;
+  color: #cc0000;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.main{
+  margin:auto;
+  padding: 50px 0;
+  text-align: center;
+  color: #cc0000;
+}
+section {
+  height: 400px;
+}
+
+.search-bar {
+  width: 800px;
+  height: 141px;
+}
+.collapsed-search-bar {
+  width: 800px;
+  height: 35px;
+  display: none;
+}
+.slide-button {
+  margin: 5px 15px;
+  width: 120px;
+  height: 25px;
+  cursor: pointer;
+  color: #cc0000;
+  border-color: #cc0000;
+  border-radius: 5px;
+
+}
+.search-bar div {
+  float: left;
+  margin: 0 5px;
+}
+
+.map-button {
+  cursor: pointer;
+  width: 246px;
+  height: 141px;
+  background-image: url(../images/searchbar/map_button.png);
+}
+
+.street-a-z {
+  cursor: pointer;
+  width: 246px;
+  height: 141px;
+  background-image: url(../images/searchbar/street-a-z-button.png);
+}
+
+.area-a-z {
+  cursor: pointer;
+  width: 246px;
+  height: 141px;
+  background-image: url(../images/searchbar/area-a-z-button.png);
+}
+
+#map {
+  display: none;
+}
