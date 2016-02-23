@@ -40,9 +40,8 @@ $(document).ready(function () {
           var  pagesArray = Object.keys(data.query.page);
           var src = data.query.pages[pagesArray[0]].revisions[0].contentmodel;
       }
-      $('.search-result').append (src);
     });
-
+    $('.search-result').append (src);
   });
 /* End Search box Submit handler */
 
