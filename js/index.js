@@ -32,7 +32,6 @@ $(document).ready(function () {
     console.log(wkQuerry);
     $.ajax({
       url: wkQuerry,
-      action: 'query',
       dataType: 'json',
       type: 'POST',
       headers: {
