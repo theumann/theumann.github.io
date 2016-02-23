@@ -34,7 +34,10 @@ $(document).ready(function () {
       url: wkQuerry,
       action: 'query',
       dataType: 'json',
-      headers: { 'Api-User-Agent': 'http://theumann.github.io/' },
+      headers: {
+        'Api-User-Agent': 'http://theumann.github.io/',
+        'Access-Control-Allow-Origin': *
+      }
 
       // success: function(data) {
       //   var src = data.query.pages.[]
