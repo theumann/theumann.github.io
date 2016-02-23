@@ -22,8 +22,6 @@ $(document).ready(function () {
     evt.preventDefault();
     var searchRequest = $('.search-input').val();
     console.log(searchRequest);
-    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
-    console.log(wkQuerry)
     $('.search-result').append (searchRequest);
     $('.search-result').slideDown("slow");
     $('.search-bar').slideUp("slow");
@@ -35,8 +33,10 @@ $(document).ready(function () {
       action: 'query',
       dataType: 'json',
       type: 'POST',
-      headers: { 'Api-User-Agent': 'SF Streets - http://theumann.github.io/' },
+      headers: { 'Api-User-Agent': 'http://theumann.github.io/' },
     });
+    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
+    console.log(wkQuerry)
   });
 /* End Search box Submit handler */
 
