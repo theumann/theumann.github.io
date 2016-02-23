@@ -38,7 +38,7 @@ $(document).ready(function () {
       },
       success: function(data) {
           var  pagesArray = Object.keys(data.query.page);
-          var src = data.query.pages[pagesArray[0]].revisions[0].*;
+          var src = data.query.pages[pagesArray[0]].revisions[0].contentmodel;
       }
       $('.search-result').append (src);
     });
