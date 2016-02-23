@@ -34,11 +34,12 @@ $(document).ready(function () {
       dataType: 'json',
       type: 'POST',
       headers: {
+        'Api-User-Agent': 'http://theumann.github.io/'
         'Access-Control-Allow-Origin': '*'
       },
       success: function(data) {
           var  pagesArray = Object.keys(data.query.page);
-          var src = data.query.pages[pagesArray[0]].revisions[0].contentmodel;
+          var src = data.query.pages[pagesArray[0]].revisions[0].*;
           $('.search-result').append (src);
       }
     });
