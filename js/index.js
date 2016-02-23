@@ -22,7 +22,6 @@ $(document).ready(function () {
     evt.preventDefault();
     var searchRequest = $('.search-input').val();
     console.log(searchRequest);
-    $('.search-result').append (searchRequest);
     $('.search-result').slideDown("slow");
     $('.search-bar').slideUp("slow");
     $('.main').animate({ top: '-600px' });
@@ -41,6 +40,7 @@ $(document).ready(function () {
           var  pagesArray = Object.keys(data.query.page);
           var src = data.query.pages[pagesArray[0]].revisions[0].*;
       }
+      $('.search-result').append (src);
     });
 
   });
