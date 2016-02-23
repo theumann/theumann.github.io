@@ -28,9 +28,9 @@ $(document).ready(function () {
     $('.main').animate({ top: '-600px' });
     $('#map').animate({ top: '-1200px' });
     $('.collapsed-search-bar').slideDown();
+    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
+    console.log(wkQuerry)
     $.ajax({
-      var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
-      console.log(wkQuerry)
       url: wkQuerry,
       action: 'query',
       dataType: 'json',
