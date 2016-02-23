@@ -10,18 +10,35 @@ header {
 h1{
   font-size: 36px;
   color: #cc0000;
-  padding: 5px 15px;
+  padding: 3px 15px;
   font-weight: bold;
 }
-
+.search-input {
+  margin: 3px 25px;
+  width: 175px;
+  height: 15px;
+  color: #cc0000;
+  border-color: #cc0000;
+  border-radius: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
 .main{
   margin:auto;
-  padding: 50px 0;
-  text-align: center;
+  padding: 25px 0;
   color: #cc0000;
+  text-align: center;
 }
-section {
-  height: 400px;
+.main p {
+  margin: 15px auto;
+}
+.main li {
+  margin: 10px auto;
+}
+
+section#map {
+  height: 800px;
 }
 
 .search-bar {
@@ -35,13 +52,14 @@ section {
 }
 .slide-button {
   margin: 5px 15px;
-  width: 120px;
+  width: 130px;
   height: 25px;
   cursor: pointer;
   color: #cc0000;
   border-color: #cc0000;
   border-radius: 5px;
-
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-weight: bold;
 }
 .search-bar div {
   float: left;
@@ -71,4 +89,26 @@ section {
 
 #map {
   display: none;
+}
+
+.search-result {
+  display: none;
+  margin:auto;
+  padding: 25px 0;
+  color: #cc0000;
+  text-align: center;
+}
+
+.footer {
+  height: 50px;
+}
+.footer div {
+  background-color: #cc0000;
+  margin: auto;
+  padding: 5px 0;
+}
+.footer div p {
+  color: white;
+  margin: 15px auto;
+  text-align: center;
 }
