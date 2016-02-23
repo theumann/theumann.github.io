@@ -22,7 +22,7 @@ $(document).ready(function () {
     evt.preventDefault();
     var searchRequest = $('.search-input').val();
     console.log(searchRequest);
-    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + "San%20Franciso%20" + searchRequest + "&prop=revisions&rvprop=content&format=json"
+    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
     console.log(wkQuerry)
     $('.search-result').append (searchRequest);
     $('.search-result').slideDown("slow");
