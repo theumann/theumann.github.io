@@ -35,7 +35,7 @@ $(document).ready(function () {
       action: 'query',
       dataType: 'json',
       type: 'POST',
-      headers: { 'Api-User-Agent': 'SF Streets - https://github.com/theumann/theumann.github.io.git' },
+      headers: { 'Api-User-Agent': 'SF Streets - http://theumann.github.io/' },
     });
   });
 /* End Search box Submit handler */
