@@ -34,6 +34,7 @@ $(document).ready(function () {
       url: wkQuerry,
       action: 'query',
       dataType: 'json',
+      type: 'POST',
       headers: {
         'Api-User-Agent': 'http://theumann.github.io/',
         'Access-Control-Allow-Origin': '*'
