@@ -29,16 +29,16 @@ $(document).ready(function () {
     $('#map').animate({ top: '-1200px' });
     $('.collapsed-search-bar').slideDown();
     var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
-    console.log(wkQuerry)
+    console.log(wkQuerry);
     $.ajax({
       url: wkQuerry,
       action: 'query',
       dataType: 'json',
       headers: { 'Api-User-Agent': 'http://theumann.github.io/' },
 
-      success: function(data) {
-        var src = data.query.pages.[]
-      }
+      // success: function(data) {
+      //   var src = data.query.pages.[]
+      // }
     });
 
   });
