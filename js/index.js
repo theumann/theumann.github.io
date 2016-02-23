@@ -38,9 +38,10 @@ $(document).ready(function () {
         'Access-Control-Allow-Origin': '*'
       }
 
-      // success: function(data) {
-      //   var src = data.query.pages.[]
-      // }
+      success: function(data) {
+        var  pagesArray = Object.keys(data.query.page);
+        var src = data.query.pages[pagesArray[0]].revisions[0].*;
+      }
     });
 
   });
