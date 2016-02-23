@@ -36,7 +36,7 @@ $(document).ready(function () {
       dataType: 'json',
       headers: {
         'Api-User-Agent': 'http://theumann.github.io/',
-        'Access-Control-Allow-Origin': *
+        'Access-Control-Allow-Origin': '*'
       }
 
       // success: function(data) {
