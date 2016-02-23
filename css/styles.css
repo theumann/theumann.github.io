@@ -8,15 +8,17 @@ header {
   background-image: url(../images/castro_banner.jpg);
 }
 h1{
+  padding: 3px 15px;
+}
+h1 a {
   font-size: 36px;
   color: #cc0000;
-  padding: 3px 15px;
   font-weight: bold;
+  text-decoration: none;
 }
 .search-input {
   margin: 3px 25px;
   width: 175px;
-  height: 15px;
   color: #cc0000;
   border-color: #cc0000;
   border-radius: 10px;
@@ -24,11 +26,21 @@ h1{
   font-weight: bold;
   text-align: center;
 }
+
+.main-section-wrapper {
+  height: 600px;
+  width:100%;
+  overflow: hidden;
+}
+
 .main{
   margin:auto;
   padding: 25px 0;
   color: #cc0000;
   text-align: center;
+  height: 100%;
+  position: relative;
+  top: 0;
 }
 .main p {
   margin: 15px auto;
@@ -38,7 +50,9 @@ h1{
 }
 
 section#map {
-  height: 800px;
+  height: 100%;
+  position: relative;
+  top: 0;
 }
 
 .search-bar {
@@ -49,6 +63,7 @@ section#map {
   width: 800px;
   height: 35px;
   display: none;
+  background-color: #eeeeee;
 }
 .slide-button {
   margin: 5px 15px;
@@ -85,10 +100,6 @@ section#map {
   width: 246px;
   height: 141px;
   background-image: url(../images/searchbar/area-a-z-button.png);
-}
-
-#map {
-  display: none;
 }
 
 .search-result {
