@@ -35,7 +35,8 @@ $(document).ready(function () {
       type: 'POST',
       headers: {
         'Api-User-Agent': 'http://theumann.github.io/'
-        'Access-Control-Allow-Origin': '*'
+        //'Access-Control-Allow-Origin': '*'
+        'wgCrossSiteAJAXdomains' : '*'
       },
       success: function(data) {
           var  pagesArray = Object.keys(data.query.page);
