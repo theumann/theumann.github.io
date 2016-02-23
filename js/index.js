@@ -32,7 +32,7 @@ $(document).ready(function () {
       url: wkQuerry,
       action: 'query',
       dataType: 'json',
-      type: 'POST',
+      type: 'GET',
       headers: { 'Api-User-Agent': 'http://theumann.github.io/' },
     });
     var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
