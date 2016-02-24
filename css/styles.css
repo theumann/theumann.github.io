@@ -149,4 +149,7 @@ section#map {
   .area-a-z {
     display: none;
   }
+  .collapsed-search-bar {
+    width: 400px;
+  }
 }
