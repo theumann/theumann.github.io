@@ -35,7 +35,7 @@ $(document).ready(function () {
       type: 'POST',
       headers: {
         'Api-User-Agent': 'http://theumann.github.io/'
-        'Access-Control-Allow-Origin': *
+        'Access-Control-Allow-Origin': '*'
       },
       success: function(data) {
           var  pagesArray = Object.keys(data.query.page);
@@ -43,7 +43,6 @@ $(document).ready(function () {
           $('.search-result').append (src);
       }
     });
-
   });
 /* End Search box Submit handler */
 
@@ -61,8 +60,6 @@ $(document).ready(function () {
 
 /*TODO
 P1
-- Fix map (only shows when toggling dev tools)
-- Add text search results from wikipedia.
 - Add map communication with wikipedia.
 - Center map with precise lat/lng.
 - Fix layout issues and links (Contact, About...)
