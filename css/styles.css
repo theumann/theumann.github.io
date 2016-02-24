@@ -7,7 +7,7 @@ header {
   height: 200px;
   background-image: url(../images/castro_banner.jpg);
 }
-h1{
+h1 {
   padding: 3px 15px;
 }
 h1 a {
@@ -94,14 +94,12 @@ section#map {
   height: 141px;
   background-image: url(../images/searchbar/street-a-z-button.png);
 }
-
 .area-a-z {
   cursor: pointer;
   width: 246px;
   height: 141px;
   background-image: url(../images/searchbar/area-a-z-button.png);
 }
-
 .search-result {
   display: none;
   margin:auto;
@@ -109,7 +107,6 @@ section#map {
   color: #cc0000;
   text-align: center;
 }
-
 .footer {
   height: 50px;
 }
@@ -122,4 +119,34 @@ section#map {
   color: white;
   margin: 15px auto;
   text-align: center;
+}
+
+
+@media only screen and (max-width: 800px) {
+  body {
+    width: 400px;
+  }
+  header {
+    background-image: url(../images/narrow_banner.jpg);
+  }
+  .search-bar {
+    width: 400px;
+    margin: auto;
+  }
+  .search-bar div {
+    float: none;
+    width: 400px;
+    margin: auto;
+  }
+  .map-button {
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .street-a-z {
+    display: none;
+  }
+  .area-a-z {
+    display: none;
+  }
 }
