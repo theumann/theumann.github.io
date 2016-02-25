@@ -33,7 +33,7 @@ h1 a {
   overflow: hidden;
 }
 
-.main{
+.main, .about-main, .contact-main {
   margin:auto;
   padding: 25px 0;
   color: #cc0000;
@@ -120,7 +120,27 @@ section#map {
   margin: 15px auto;
   text-align: center;
 }
+a:link {
+  color: inherit;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+h3{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 5px 0 5px 5px;
+}
+/*h3 for contact page*/
+h3.contact{
 
+}
+.contact-main {
+  margin-top: 50px;
+  text-align: center;
+}
 
 @media only screen and (max-width: 800px) {
   body {
