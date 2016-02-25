@@ -1,7 +1,7 @@
 /* Google Map Initialization */
 function initMap() {
 var map = new google.maps.Map(document.getElementById('map'), {
-center: {lat: 37.8, lng: -122.6},
+center: {lat: 37.756, lng: -122.431},
 zoom: 12
 });
 };
@@ -29,13 +29,13 @@ $(document).ready(function () {
     $('.collapsed-search-bar').slideDown();
     var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
     console.log(wkQuerry);
-    $.ajax({
+/*    $.ajax({
       url: wkQuerry,
       dataType: 'json',
       type: 'POST',
       headers: {
         'Api-User-Agent': 'http://theumann.github.io/'
-        'Access-Control-Allow-Origin': '*'
+        //'Access-Control-Allow-Origin': '*'
       },
       success: function(data) {
           var  pagesArray = Object.keys(data.query.page);
@@ -43,6 +43,8 @@ $(document).ready(function () {
           $('.search-result').append (src);
       }
     });
+    */
+    $('.search-result').append (searchRequest);
   });
 /* End Search box Submit handler */
 
