@@ -68,7 +68,7 @@ $(document).ready(function () {
            action: 'query',
            meta: 'userinfo',
            format: 'json',
-           origin: 'https://www.mediawiki.org'
+    //       origin: 'http://theumann.github.io/'
        },
        xhrFields: {
            withCredentials: true
@@ -76,8 +76,8 @@ $(document).ready(function () {
        dataType: 'json',
        type: 'POST',
        headers: {
-         'Api-User-Agent': 'http://theumann.github.io/'
-       },
+        'origin': 'http://theumann.github.io'
+      /*'Access-Control-Allow-Origin': '*' */},
        success: function(data) {
            var  pagesArray = Object.keys(data.query.page);
            var src = 'data.query.pages[pagesArray[0]].revisions[0].*';
