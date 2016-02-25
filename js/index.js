@@ -33,35 +33,7 @@ $(document).ready(function () {
     $('.collapsed-search-bar').slideDown();
     var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
     console.log(wkQuerry);
-/*    $.ajax({
-      url: wkQuerry,
-      dataType: 'json',
-      type: 'POST',
-      headers: {
-        'Api-User-Agent': 'http://theumann.github.io/'
-        'Access-Control-Allow-Origin': '*'
-      },
-      success: function(data) {
-          var  pagesArray = Object.keys(data.query.page);
-          var src = data.query.pages[pagesArray[0]].revisions[0].*;
-          $('.search-result').append (src);
-      }
-*/
-/*      $.ajax ({
-        url: wkQuerry,
-    //    data: queryData,
-        dataType: 'json',
-        type: 'POST',
-        headers: {
-          'Api-User-Agent': 'http://theumann.github.io/'
-        },
-        success: function(data) {
-            var  pagesArray = Object.keys(data.query.page);
-            var src = 'data.query.pages[pagesArray[0]].revisions[0].*';
-            $('.search-result').append (src);
-        }
-    });
-    */
+
     $.ajax ({
        url: wkQuerry,
        jsonp: "callback",
