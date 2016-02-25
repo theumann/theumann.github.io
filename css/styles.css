@@ -145,7 +145,7 @@ h3{
 h3.contact{
 
 }
-.contact-main {
+.contact-main, .about-main {
   margin-top: 50px;
   text-align: center;
 }

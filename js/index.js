@@ -56,8 +56,8 @@ $(document).ready(function () {
   $('.slide-button').click(function() {
     $('.search-result').slideUp();
     $('.main').animate({ top: '0' });
-    $('.main').animate({ top: '0' });
-    $('.main').animate({ top: '0' });
+    $('.about-main').animate({ top: '0' });
+    $('.contact-main').animate({ top: '0' });
     $('#map').animate({ top: '0' });
     $('.search-bar').slideDown("slow");
     $('.collapsed-search-bar').slideUp();
