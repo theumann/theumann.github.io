@@ -64,23 +64,25 @@ $(document).ready(function () {
     */
     $.ajax ({
        url: wkQuerry,
+       jsonp: "callback",
+       dataType: 'jsonp',
        data: {
-           action: 'query',
-           meta: 'userinfo',
-           format: 'json',
-    //       origin: 'http://theumann.github.io/'
+         action: 'query',
+         format: 'json',
        },
        xhrFields: {
            withCredentials: true
        },
-       dataType: 'json',
        type: 'POST',
        headers: {
-        'origin': 'http://theumann.github.io'
-      /*'Access-Control-Allow-Origin': '*' */},
+      'Access-Control-Allow-Origin': 'http://theumann.github.io',
+      'origin': 'http://theumann.github.io',
+      'Content-Type': 'application/json; charset=UTF-8'
+      },
+      origin: 'http://theumann.github.io',
        success: function(data) {
-           var  pagesArray = Object.keys(data.query.page);
-           var src = 'data.query.pages[pagesArray[0]].revisions[0].*';
+           var  pagesArray = Object.keys(data.query.pages);
+           var src = data.query.pages[pagesArray[0]].revisions[0];
            $('.search-result').append (src);
        }
    });
