@@ -58,7 +58,7 @@ h1 a {
   position: relative;
   top: 0;
 }
-.main p {
+.main p, .contact-main p, .about-main p {
   margin: 15px auto;
 }
 .main li {
@@ -147,7 +147,6 @@ h3.contact{
 }
 .contact-main, .about-main {
   margin-top: 50px;
-  text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
