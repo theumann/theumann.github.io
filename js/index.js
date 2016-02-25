@@ -11,6 +11,8 @@ zoom: 12
 $(document).ready(function () {
   $('.map-button').click(function() {
     $('.main').animate({ top: '-600px' });
+    $('.about-main').animate({ top: '-600px' });
+    $('.contact-main').animate({ top: '-600px' });
     $('#map').animate({ top: '-600px' });
     $('.search-bar').slideUp("slow");
     $('.collapsed-search-bar').slideDown();
@@ -25,6 +27,8 @@ $(document).ready(function () {
     $('.search-result').slideDown("slow");
     $('.search-bar').slideUp("slow");
     $('.main').animate({ top: '-600px' });
+    $('.about-main').animate({ top: '-600px' });
+    $('.contact-main').animate({ top: '-600px' });
     $('#map').animate({ top: '-1200px' });
     $('.collapsed-search-bar').slideDown();
     var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
@@ -51,6 +55,8 @@ $(document).ready(function () {
 /* Main Section Reset */
   $('.slide-button').click(function() {
     $('.search-result').slideUp();
+    $('.main').animate({ top: '0' });
+    $('.main').animate({ top: '0' });
     $('.main').animate({ top: '0' });
     $('#map').animate({ top: '0' });
     $('.search-bar').slideDown("slow");
