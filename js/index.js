@@ -31,7 +31,7 @@ $(document).ready(function () {
     $('.contact-main').animate({ top: '-600px' });
     $('#map').animate({ top: '-1200px' });
     $('.collapsed-search-bar').slideDown();
-    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
+    var wkQuerry = "http://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
     console.log(wkQuerry);
 /*    $.ajax({
       url: wkQuerry,
@@ -46,9 +46,44 @@ $(document).ready(function () {
           var src = data.query.pages[pagesArray[0]].revisions[0].*;
           $('.search-result').append (src);
       }
+*/
+/*      $.ajax ({
+        url: wkQuerry,
+    //    data: queryData,
+        dataType: 'json',
+        type: 'POST',
+        headers: {
+          'Api-User-Agent': 'http://theumann.github.io/'
+        },
+        success: function(data) {
+            var  pagesArray = Object.keys(data.query.page);
+            var src = 'data.query.pages[pagesArray[0]].revisions[0].*';
+            $('.search-result').append (src);
+        }
     });
     */
-    $('.search-result').append (searchRequest);
+    $.ajax ({
+       url: wkQuerry,
+       data: {
+           action: 'query',
+           meta: 'userinfo',
+           format: 'json',
+           origin: 'https://www.mediawiki.org'
+       },
+       xhrFields: {
+           withCredentials: true
+       },
+       dataType: 'json',
+       type: 'POST',
+       headers: {
+         'Api-User-Agent': 'http://theumann.github.io/'
+       },
+       success: function(data) {
+           var  pagesArray = Object.keys(data.query.page);
+           var src = 'data.query.pages[pagesArray[0]].revisions[0].*';
+           $('.search-result').append (src);
+       }
+   });
   });
 /* End Search box Submit handler */
 
