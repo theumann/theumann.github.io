@@ -54,7 +54,8 @@ $(document).ready(function () {
       origin: 'http://theumann.github.io',
        success: function(data) {
            var  pagesArray = Object.keys(data.query.pages);
-           var src = data.query.pages[pagesArray[0]].revisions[0];
+           var src = data.query.pages[pagesArray[0]].revisions[0].contentmodel;
+           console.log(src);
            $('.search-result').append (src);
        }
    });
