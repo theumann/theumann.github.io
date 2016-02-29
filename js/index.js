@@ -31,7 +31,7 @@ $(document).ready(function () {
     $('.contact-main').animate({ top: '-600px' });
     $('#map').animate({ top: '-1200px' });
     $('.collapsed-search-bar').slideDown();
-    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&format=json"
+    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&prop=extracts&format=json"
     console.log(wkQuerry);
 
     $.ajax ({
@@ -54,7 +54,7 @@ $(document).ready(function () {
       origin: 'http://theumann.github.io',
        success: function(data) {
            var  pagesArray = Object.keys(data.query.pages);
-           var src = data.query.pages[pagesArray[0]].revisions[0].contentmodel;
+           var src = data.query.pages[pagesArray[0]].extract;
            console.log(src);
            $('.search-result').append (src);
        }
