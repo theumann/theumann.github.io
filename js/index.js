@@ -56,7 +56,7 @@ $(document).ready(function () {
            var  pagesArray = Object.keys(data.query.pages);
            var title = data.query.pages[pagesArray[0]].title;
            var src = data.query.pages[pagesArray[0]].extract;
-           console.log(src);
+           $('.search-result').empty();
            $('.search-result').append ('<h2>'+title+'</h2>');
            $('.search-result').append ('<p>'+src+'</p>');
        }
