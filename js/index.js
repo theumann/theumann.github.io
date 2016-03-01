@@ -42,16 +42,16 @@ $(document).ready(function () {
          action: 'query',
          format: 'json',
        },
-       xhrFields: {
-           withCredentials: true
-       },
+      //  xhrFields: {
+      //      withCredentials: true
+      //  },
        type: 'POST',
        headers: {
       'Access-Control-Allow-Origin': 'http://theumann.github.io',
       'origin': 'http://theumann.github.io',
       'Content-Type': 'application/json; charset=UTF-8'
       },
-      origin: 'http://theumann.github.io',
+//      origin: 'http://theumann.github.io',
        success: function(data) {
            var  pagesArray = Object.keys(data.query.pages);
            var title = data.query.pages[pagesArray[0]].title;
