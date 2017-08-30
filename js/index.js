@@ -31,7 +31,8 @@ $(document).ready(function () {
     $('.contact-main').animate({ top: '-600px' });
     $('#map').animate({ top: '-1200px' });
     $('.collapsed-search-bar').slideDown();
-    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=revisions&rvprop=content&prop=extracts&format=json"
+
+    var wkQuerry = "https://en.wikipedia.org/w/api.php?action=query&titles=" + searchRequest + "_Street&prop=extracts&format=json"
     console.log(wkQuerry);
 
     $.ajax ({
@@ -42,16 +43,14 @@ $(document).ready(function () {
          action: 'query',
          format: 'json',
        },
-      //  xhrFields: {
-      //      withCredentials: true
-      //  },
        type: 'POST',
-       headers: {
+/*       headers: {
       'Access-Control-Allow-Origin': 'http://theumann.github.io',
       'origin': 'http://theumann.github.io',
       'Content-Type': 'application/json; charset=UTF-8'
       },
-//      origin: 'http://theumann.github.io',
+      */
+
        success: function(data) {
            var  pagesArray = Object.keys(data.query.pages);
            var title = data.query.pages[pagesArray[0]].title;
